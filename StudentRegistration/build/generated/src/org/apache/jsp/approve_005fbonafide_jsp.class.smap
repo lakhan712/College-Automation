@@ -1,0 +1,31 @@
+SMAP
+approve_005fbonafide_jsp.java
+JSP
+*S JSP
+*F
++ 0 approve_bonafide.jsp
+approve_bonafide.jsp
++ 1 boost.jsp
+boost.jsp
++ 2 connect.jsp
+connect.jsp
+*L
+1:51
+1#1,17:52
+2#0:68
+1#2,2:69
+4,11:72
+3#0,2:83
+5,22:86
+26,123:108
+149,5:232
+153,2:237
+155:239,3
+156:242,6
+157:248
+158:249,5
+159:254,3
+160,2:257
+162:259,3
+163,92:262
+*E

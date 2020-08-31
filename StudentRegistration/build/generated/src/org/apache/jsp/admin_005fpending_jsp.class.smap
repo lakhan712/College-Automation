@@ -1,0 +1,32 @@
+SMAP
+admin_005fpending_jsp.java
+JSP
+*S JSP
+*F
++ 0 admin_pending.jsp
+admin_pending.jsp
++ 1 boost.jsp
+boost.jsp
++ 2 connect.jsp
+connect.jsp
+*L
+1:51
+1#1,17:52
+2#0:68
+1#2,2:69
+4,11:72
+3#0:83
+5,19:85
+23,69:104
+92,5:174
+96,2:179
+98:181,10
+99,4:191,3
+103,2:203
+105:205,3
+106,34:208
+140:242,3
+141,28:245
+169:273,3
+170,23:276
+*E

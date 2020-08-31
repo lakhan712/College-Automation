@@ -1,0 +1,17 @@
+SMAP
+getBonafide_jsp.java
+JSP
+*S JSP
+*F
++ 0 getBonafide.jsp
+getBonafide.jsp
++ 1 connect.jsp
+connect.jsp
+*L
+5,5:58
+1#1,2:62
+4,11:65
+9#0,11:76
+20,54:88
+73,5:142
+*E

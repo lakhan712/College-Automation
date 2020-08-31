@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a22a38fb-f3e0-4cbb-9426-f3272e03dee7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="188"/>
+	<parameter name="session" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     student_login.`id` AS student_login_id,
+     student_login.`fname` AS student_login_fname,
+     student_login.`mname` AS student_login_mname,
+     student_login.`lname` AS student_login_lname,
+     student_login.`gender` AS student_login_gender,
+     student_login.`email` AS student_login_email,
+     student_login.`mobile` AS student_login_mobile,
+     student_login.`username` AS student_login_username,
+     student_login.`password` AS student_login_password,
+     student_login.`tg_id` AS student_login_tg_id,
+     student_login.`branch` AS student_login_branch,
+     student_login.`allow` AS student_login_allow,
+     student_login_A.`id` AS student_login_A_id,
+     student_login_A.`fname` AS student_login_A_fname,
+     student_login_A.`mname` AS student_login_A_mname,
+     student_login_A.`lname` AS student_login_A_lname,
+     student_login_A.`gender` AS student_login_A_gender,
+     student_login_A.`email` AS student_login_A_email,
+     student_login_A.`mobile` AS student_login_A_mobile,
+     student_login_A.`username` AS student_login_A_username,
+     student_login_A.`password` AS student_login_A_password,
+     student_login_A.`tg_id` AS student_login_A_tg_id,
+     student_login_A.`branch` AS student_login_A_branch,
+     student_login_A.`allow` AS student_login_A_allow,
+     master_branch.`id` AS master_branch_id,
+     master_branch.`branch_name` AS master_branch_branch_name,
+     master_category.`id` AS master_category_id,
+     master_category.`cat_name` AS master_category_cat_name,
+     master_category.`fees` AS master_category_fees,
+     bonafide_data.`id` AS bonafide_data_id,
+     bonafide_data.`sid` AS bonafide_data_sid,
+     bonafide_data.`c_year_type` AS bonafide_data_c_year_type,
+     bonafide_data.`admission_year_type` AS bonafide_data_admission_year_type,
+     bonafide_data.`A_year` AS bonafide_data_A_year,
+     bonafide_data.`purpose` AS bonafide_data_purpose,
+     bonafide_data.`status` AS bonafide_data_status
+FROM
+     `student_login` student_login,
+     `student_login` student_login_A,
+     `master_branch` master_branch,
+     `master_category` master_category,
+     `bonafide_data` bonafide_data
+WHERE
+     student_login.id = $P{session} and
+	bonafide_data.sid=$P{session}  and
+	master_branch.id = student_login.branch]]>
+	</queryString>
+	<field name="student_login_id" class="java.lang.Integer"/>
+	<field name="student_login_fname" class="java.lang.String"/>
+	<field name="student_login_mname" class="java.lang.String"/>
+	<field name="student_login_lname" class="java.lang.String"/>
+	<field name="student_login_gender" class="java.lang.String"/>
+	<field name="student_login_email" class="java.lang.String"/>
+	<field name="student_login_mobile" class="java.lang.String"/>
+	<field name="student_login_username" class="java.lang.String"/>
+	<field name="student_login_password" class="java.lang.String"/>
+	<field name="student_login_tg_id" class="java.lang.Integer"/>
+	<field name="student_login_branch" class="java.lang.String"/>
+	<field name="student_login_allow" class="java.lang.Integer"/>
+	<field name="student_login_A_id" class="java.lang.Integer"/>
+	<field name="student_login_A_fname" class="java.lang.String"/>
+	<field name="student_login_A_mname" class="java.lang.String"/>
+	<field name="student_login_A_lname" class="java.lang.String"/>
+	<field name="student_login_A_gender" class="java.lang.String"/>
+	<field name="student_login_A_email" class="java.lang.String"/>
+	<field name="student_login_A_mobile" class="java.lang.String"/>
+	<field name="student_login_A_username" class="java.lang.String"/>
+	<field name="student_login_A_password" class="java.lang.String"/>
+	<field name="student_login_A_tg_id" class="java.lang.Integer"/>
+	<field name="student_login_A_branch" class="java.lang.String"/>
+	<field name="student_login_A_allow" class="java.lang.Integer"/>
+	<field name="master_branch_id" class="java.lang.Integer"/>
+	<field name="master_branch_branch_name" class="java.lang.String"/>
+	<field name="master_category_id" class="java.lang.Integer"/>
+	<field name="master_category_cat_name" class="java.lang.String"/>
+	<field name="master_category_fees" class="java.lang.String"/>
+	<field name="bonafide_data_id" class="java.lang.Integer"/>
+	<field name="bonafide_data_sid" class="java.lang.String"/>
+	<field name="bonafide_data_c_year_type" class="java.lang.String"/>
+	<field name="bonafide_data_admission_year_type" class="java.lang.String"/>
+	<field name="bonafide_data_A_year" class="java.lang.String"/>
+	<field name="bonafide_data_purpose" class="java.lang.String"/>
+	<field name="bonafide_data_status" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="149" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="117" height="79" uuid="bfa84e12-bee8-4375-9be6-1ca7ba3a5a2f"/>
+				<imageExpression><![CDATA["E:\\ORS\\report\\dpcoe.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="119" y="1" width="415" height="26" uuid="c1b2d4f2-1772-4b19-bb44-cd074d889080"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DHOLE PATIL COLLEGE OF ENGINEERING]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="27" width="414" height="15" uuid="fe524768-35b4-41e6-8345-4f034eb435e2"/>
+				<text><![CDATA[1284,Near Kharadi EON IT Park, Dhole Patil College Road, Wagholi, Pune 412207]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="42" width="414" height="15" uuid="73dedb47-2ba7-42c8-b6ea-9e0b9f09c4f8"/>
+				<text><![CDATA[ISO 9001:2015 Certified Institute, Approved by A.I.C.T.E New Delhi, D.T.E.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="57" width="414" height="15" uuid="3f3aa06b-e1f9-456f-a3ad-0475793e8552"/>
+				<text><![CDATA[Govt of Maharashtra and Affiliated to Savitribai Phule Pune University, Pune.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="70" width="414" height="15" uuid="b873f3a2-5c1a-4a37-b11c-70d33b0eea30"/>
+				<text><![CDATA[Web-Site: www.dpcoe.com, Email: dpcoepune@gmail.com Tel+91-20-66059900]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="85" width="117" height="16" uuid="6aae4dca-99b8-418b-b88b-085ebe16e154"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ACA/04]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="85" width="312" height="16" uuid="7a107463-b8fe-4e72-8cca-cb91082a4da2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[PRINCIPAL OFFICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="129" width="54" height="20" uuid="253292b3-20f2-4c66-b81e-8a6ecee4d92e"/>
+				<text><![CDATA[Rev. 00 Dt. ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="54" y="129" width="63" height="20" uuid="65fda765-b795-4eae-8a8d-dd81c1c709f9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="197" y="120" width="162" height="24" uuid="209e90bb-14ea-444e-96e4-de47caed7ed6"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Bonafide Letter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="109" width="146" height="20" uuid="f4cf05f4-018c-4afb-a30f-313209455aac"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Academic Year 2018-19]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="129" width="146" height="15" uuid="5a4bb90b-bdae-460d-a17e-01419c7ff686"/>
+				<text><![CDATA[Semester: odd/even]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-50" y="101" width="624" height="1" uuid="890f86b6-1c5a-41b1-8665-e4f4f08e50a9"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="-40" y="0" width="624" height="1" uuid="73cea58d-e1f0-4406-8c02-d6482cc88c50"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="7" width="141" height="20" uuid="f82729e0-328a-4bc9-805e-fe09d0a54c7f"/>
+				<text><![CDATA[Ref No DPCOE/AO/2018-19/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="7" width="34" height="20" uuid="270fc23d-9fcd-42cb-913f-c518e14f701d"/>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yy">
+				<reportElement x="466" y="7" width="100" height="20" uuid="ddf1ca6f-5566-42c0-af5d-67c2995dc05c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="365" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="73" width="555" height="20" uuid="f8320fa8-c23a-4d5f-ab95-fe784d3bd0b4"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[TO WHOM –SO- EVER IT MAY CONCERN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="108" width="163" height="20" uuid="2bd238f8-b7af-4bff-9ffa-50cff87db893"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[This is to certify that Mr./Miss.]]></text>
+			</staticText>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="217" y="108" width="89" height="20" uuid="3f7435f2-4ee9-4f1b-b14a-74a416be0dcf"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_login_fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="108" width="86" height="20" uuid="b0ec4648-c6a7-44d6-aba7-13d37c27019e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_login_mname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="108" width="86" height="20" uuid="41d42c3c-9606-4a81-abb7-84a844305d8f"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_login_lname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="128" width="232" height="20" uuid="5514fb6c-a944-42b6-b288-f4db0ff8168a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[is a bonafide student of our college for the ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="128" width="25" height="20" uuid="6d3a9937-8313-407b-9406-06d686861be1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[of]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="148" width="121" height="20" uuid="e66d9b43-ac15-4fe4-81ce-0583c2cc23d8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[for the academic year ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="128" width="111" height="20" uuid="020cddad-2a6f-4405-88bc-5a9bc14a19c4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Engineering Course]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="188" width="116" height="20" uuid="a1d24b3f-0786-49a2-ae4f-4a59c554884f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Year of Admission is]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="188" width="53" height="20" uuid="1a9b130e-64b0-4b6a-ae55-c22dc0bdef19"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Category:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="231" width="473" height="20" uuid="10e83e05-d4be-4c94-a298-0a4700f18968"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[‘Dhole Patil College of Engineering’, Wagholi is an unaided college recognized by All India]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="271" width="528" height="20" uuid="4661e969-c4ec-493d-b85d-5c2956847dea"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Education, Government of Maharashtra, Mumbai and affiliated to the Savitribai Phule Pune ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="291" width="529" height="20" uuid="2eb6fd32-6720-4cee-ae54-a60b23909c48"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[University Pune.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="322" width="362" height="20" uuid="9338808e-eb23-418e-b644-421af6030ddb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[This certificate is being issued on the request from the Student for]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="342" width="100" height="20" uuid="3007af99-b468-4e0f-9495-a9bcfcc18e53"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[purpose only.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-26" y="-99" width="610" height="1" uuid="4e81e6d3-935d-4a05-9f59-de7cc9b3f790"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="168" width="252" height="20" uuid="efb47a79-c04c-469d-97fd-ec30107c1f2b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[The duration of the said course is spread over  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="148" width="100" height="20" uuid="81ff5f34-f9e9-4ae6-b06e-a540788b1400"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2018–19.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="168" width="13" height="20" uuid="2d6e853a-e805-4162-a051-7562451ab5b2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="168" width="74" height="20" uuid="b5b17c5b-ba29-4b96-87e7-9818d2277b87"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[semesters in]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="168" width="47" height="20" uuid="095c8006-3ac4-4857-8500-bdc0a0b083f7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4 (Four) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="168" width="100" height="20" uuid="8c98919c-ea39-4d7f-8f4e-7842bf28a24d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[academic years.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="251" width="528" height="20" uuid="27cf49d9-8c0d-47be-a3a5-a13a23adf6a7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Council for Technical Education, New Delhi, approved by the Department of Higher & Technical]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="359" y="128" width="96" height="20" uuid="aa60d3ac-b1da-4805-bc52-97b0fa0ffa7f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{master_branch_branch_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="188" width="197" height="20" uuid="20195663-5e24-41d7-a2f5-93e553262ea6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{master_category_cat_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="128" width="82" height="20" uuid="0c18c2c4-9335-45b2-ad8e-0acfa819e674"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bonafide_data_c_year_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="188" width="41" height="20" uuid="478e25f0-b6a3-4e81-9f1d-9d48ca8b6391"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bonafide_data_A_year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="175" y="188" width="131" height="20" uuid="59669e7c-393c-4043-829f-eb2c818a340e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bonafide_data_admission_year_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="322" width="193" height="20" uuid="fed9ebab-e44f-44ad-ac16-5ab9db2bfb0a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bonafide_data_purpose}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="0" width="100" height="20" uuid="ac8403d8-7ab5-41e0-8ea6-f36034ff6647"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Place: Pune]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="66" width="100" height="20" uuid="bd888b79-c119-487d-b3ce-487213a85ea5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prepared By    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="66" width="100" height="20" uuid="1b0c1fa8-b090-4a8b-afb4-04414e88a4e1"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Checked By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="66" width="100" height="20" uuid="7e30c887-646b-43cc-87bf-f68334861c64"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
